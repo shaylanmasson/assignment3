@@ -19,8 +19,10 @@ module.exports = class extends Page {
             <p>${oEntity.full_description}</p>
             <p>${oEntity.meal_date}</p>
             <p>${oEntity.meal_location}</p>
-            <form action="http://localhost:3002/payment" method="post">
+            <p>${oEntity.meal_price}</p>
+            <form action="https://peaceful-wildwood-90096.herokuapp.com/payment/" method="post">
             <input type="hidden" name="title" value="${oEntity.title}" />
+            <input type="hidden" name="price" value="${oEntity.price}" />
             <input type="tel" placeholder="enter your number" />
             <button type="submit">Order now</button>
             </form>
